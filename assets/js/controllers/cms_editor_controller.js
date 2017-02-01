@@ -96,8 +96,8 @@ enduro_admin_app.controller('cms-editor-controller', ['$scope', '$rootScope', '$
 			if (!$scope.tempwindow || !$scope.tempwindow.location.hostname) {
 				$scope.tempwindow = window.open()
 			}
-			console.log("temping!", $scope.current_culture)
-			content_service.get_temp_page($routeParams.page_path, $scope.context)
+
+			content_service.get_temp_page($routeParams.page_path, $scope.context, $scope.current_culture)
 				.then(function (temp_destination_path) {
 
 					$scope.temping = false
