@@ -97,7 +97,7 @@ enduro_admin_app.controller('cms-editor-controller', ['$scope', '$rootScope', '$
 				$scope.tempwindow = window.open()
 			}
 
-			content_service.get_temp_page($routeParams.page_path, $scope.context)
+			content_service.get_temp_page($routeParams.page_path, $scope.context, $scope.current_culture)
 				.then(function (temp_destination_path) {
 
 					$scope.temping = false
